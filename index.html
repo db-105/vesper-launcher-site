@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vesper Launcher — a clean Windows desktop launcher for Minecraft Java Edition." />
+  <title>Vesper Launcher</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky" aria-hidden="true">
+    <div class="stars stars-a"></div>
+    <div class="stars stars-b"></div>
+    <div class="shooting-star"></div>
+    <div class="mountains back"></div>
+    <div class="mountains front"></div>
+    <div class="village"></div>
+  </div>
+
+  <header class="nav-wrap">
+    <nav class="nav container">
+      <a class="brand" href="index.html" aria-label="Vesper home">
+        <span class="mini-mark">✦</span>
+        <span class="brand-word">VESPER</span>
+      </a>
+      <div class="links">
+        <a href="#features">Features</a>
+        <a href="#security">Security</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-logo-wrap">
+        <img class="hero-logo" src="assets/vesper-logo.png" alt="Vesper — Powered by AXON Studio" />
+      </div>
+      <div class="eyebrow">WINDOWS DESKTOP LAUNCHER</div>
+      <p class="tagline">A calmer launcher. A cleaner experience.</p>
+      <p class="intro">
+        Vesper Launcher is an independent Windows desktop launcher for Minecraft Java Edition.
+        It is designed around simple version management, isolated game directories,
+        secure Microsoft authentication, and a clean dark interface.
+      </p>
+      <div class="badges">
+        <span>Windows</span>
+        <span>Public Client</span>
+        <span>Microsoft Device Login</span>
+        <span>No cracked login</span>
+      </div>
+    </section>
+
+    <section id="features" class="section container">
+      <div class="section-heading">
+        <span>01</span>
+        <h2>What Vesper does</h2>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>Version management</h3>
+          <p>Fetches official Mojang release information and manages selected Minecraft Java Edition versions.</p>
+        </article>
+        <article class="card">
+          <h3>Verified game files</h3>
+          <p>Downloads required files, verifies them and repairs damaged files when necessary.</p>
+        </article>
+        <article class="card">
+          <h3>Isolated instances</h3>
+          <p>Keeps Vesper game data separate from the official launcher installation and other instances.</p>
+        </article>
+        <article class="card">
+          <h3>Java detection</h3>
+          <p>Detects a compatible local Java installation and uses configured memory settings for launch.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="security" class="section container">
+      <div class="section-heading">
+        <span>02</span>
+        <h2>Authentication & security</h2>
+      </div>
+      <div class="panel">
+        <p>
+          Vesper uses Microsoft's public-client device authorization flow. It never asks for,
+          receives, or stores a Microsoft account password.
+        </p>
+        <ul>
+          <li>Microsoft scopes are limited to <code>XboxLive.signin</code> and <code>offline_access</code>.</li>
+          <li>No Microsoft Graph permissions are requested.</li>
+          <li>No client secret is embedded in the desktop application.</li>
+          <li>Refresh credentials are stored using Windows Credential Manager.</li>
+          <li>Access tokens are kept in application memory and are not published or collected.</li>
+          <li>Vesper requires valid Microsoft/Minecraft authentication and has no offline/cracked account bypass.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <span>03</span>
+        <h2>Project status</h2>
+      </div>
+      <div class="panel">
+        <p>
+          Vesper is currently in development and undergoing Minecraft Game Services application review.
+          The launcher is not a Minecraft replacement and does not redistribute the Minecraft game.
+        </p>
+        <p class="small">
+          Vesper is an independent project and is not affiliated with, endorsed by, or sponsored by
+          Mojang Studios or Microsoft.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>
+        <strong>VESPER</strong>
+        <span>Powered by AXON Studio</span>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:baftiajdion@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
