@@ -3,129 +3,228 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Vesper Launcher — a clean Windows desktop launcher for Minecraft Java Edition." />
-  <title>Vesper Launcher</title>
+  <meta name="theme-color" content="#050a12" />
+  <meta name="description" content="Vesper Launcher — a calm, secure Windows launcher for Minecraft Java Edition, built by AXON Studio." />
+  <title>Vesper Launcher — Built for the night</title>
+  <link rel="preconnect" href="https://api.github.com" />
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <div class="sky" aria-hidden="true">
-    <div class="stars stars-a"></div>
-    <div class="stars stars-b"></div>
-    <div class="shooting-star"></div>
-    <div class="mountains back"></div>
-    <div class="mountains front"></div>
-    <div class="village"></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="ambient" aria-hidden="true">
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="horizon-glow"></div>
+    <div class="mountain mountain-back"></div>
+    <div class="mountain mountain-front"></div>
   </div>
 
   <header class="nav-wrap">
-    <nav class="nav container">
-      <a class="brand" href="index.html" aria-label="Vesper home">
-        <span class="mini-mark">✦</span>
-        <span class="brand-word">VESPER</span>
+    <nav class="nav shell">
+      <a class="brand" href="#top" aria-label="Vesper home">
+        <img src="assets/vesper-mark.png" alt="" />
+        <span>VESPER</span>
       </a>
-      <div class="links">
+      <div class="nav-links" aria-label="Primary navigation">
         <a href="#features">Features</a>
+        <a href="#story">Story</a>
         <a href="#security">Security</a>
         <a href="privacy.html">Privacy</a>
       </div>
+      <a class="nav-download" href="#download">Download</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero container">
-      <div class="hero-logo-wrap">
-        <img class="hero-logo" src="assets/vesper-logo.png" alt="Vesper — Powered by AXON Studio" />
+  <main id="top">
+    <section class="hero shell">
+      <div class="hero-copy" data-reveal>
+        <p class="kicker"><span></span> WINDOWS · MINECRAFT JAVA</p>
+        <h1>Built for the night.<br /><em>Made to disappear.</em></h1>
+        <p class="hero-lead">
+          Vesper gets you into Minecraft without turning the launcher into the main event.
+          Clean instances, secure Microsoft login, automatic Java handling, and a dark interface that stays out of your way.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-primary" data-download aria-disabled="true">
+            <span data-download-label>Public release coming soon</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
+          </a>
+          <a class="button button-ghost" href="#story">Explore Vesper</a>
+        </div>
+        <div class="release-line">
+          <span class="status-dot"></span>
+          <strong data-version>Preview</strong>
+          <span data-release-status>Release candidate in final testing</span>
+        </div>
       </div>
-      <div class="eyebrow">WINDOWS DESKTOP LAUNCHER</div>
-      <p class="tagline">A calmer launcher. A cleaner experience.</p>
-      <p class="intro">
-        Vesper Launcher is an independent Windows desktop launcher for Minecraft Java Edition.
-        It is designed around simple version management, isolated game directories,
-        secure Microsoft authentication, and a clean dark interface.
-      </p>
-      <div class="badges">
-        <span>Windows</span>
-        <span>Public Client</span>
-        <span>Microsoft Device Login</span>
-        <span>No cracked login</span>
+
+      <div class="hero-brand" data-parallax data-reveal>
+        <div class="brand-orbit orbit-one"></div>
+        <div class="brand-orbit orbit-two"></div>
+        <img class="hero-mark" src="assets/vesper-mark.png" alt="Vesper symbol" />
+        <div class="hero-word">VESPER</div>
+        <div class="hero-studio">POWERED BY AXON STUDIO</div>
+        <div class="brand-glow"></div>
+      </div>
+
+      <div class="scroll-cue" aria-hidden="true">
+        <span>SCROLL</span><i></i>
       </div>
     </section>
 
-    <section id="features" class="section container">
-      <div class="section-heading">
-        <span>01</span>
-        <h2>What Vesper does</h2>
+    <section class="signal-strip" aria-label="Vesper capabilities">
+      <div class="signal-track">
+        <span>MICROSOFT DEVICE LOGIN</span><i>✦</i>
+        <span>AUTOMATIC JAVA RUNTIMES</span><i>✦</i>
+        <span>ISOLATED INSTANCES</span><i>✦</i>
+        <span>DAWN MIGRATION</span><i>✦</i>
+        <span>VERIFIED GAME FILES</span><i>✦</i>
+        <span>SECURE UPDATES</span><i>✦</i>
+        <span>MICROSOFT DEVICE LOGIN</span><i>✦</i>
+        <span>AUTOMATIC JAVA RUNTIMES</span><i>✦</i>
       </div>
-      <div class="grid">
-        <article class="card">
-          <h3>Version management</h3>
-          <p>Fetches official Mojang release information and manages selected Minecraft Java Edition versions.</p>
+    </section>
+
+    <section id="features" class="section shell">
+      <div class="section-intro" data-reveal>
+        <p class="section-index">01 / THE LAUNCHER</p>
+        <h2>Less launcher.<br />More Minecraft.</h2>
+        <p>Everything Vesper does is built around one idea: the launcher should solve problems before you notice them.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature feature-wide" data-reveal>
+          <div class="feature-number">01</div>
+          <div>
+            <p class="feature-label">RUNTIME</p>
+            <h3>Java that manages itself.</h3>
+            <p>Vesper detects the Java version a Minecraft release actually needs. If it is missing, Vesper can prepare an isolated compatible runtime without changing your global PATH or JAVA_HOME.</p>
+          </div>
+          <div class="runtime-visual" aria-hidden="true">
+            <span>1.21.8</span><b>JAVA 21</b>
+            <span>26.1.2</span><b>JAVA 25</b>
+            <i>READY</i>
+          </div>
         </article>
-        <article class="card">
-          <h3>Verified game files</h3>
-          <p>Downloads required files, verifies them and repairs damaged files when necessary.</p>
+
+        <article class="feature" data-reveal>
+          <div class="feature-number">02</div>
+          <p class="feature-label">MIGRATION</p>
+          <h3>Move in. Leave nothing behind.</h3>
+          <p>Vesper can migrate compatible user data from Dawn into isolated Vesper instances while leaving the source installation untouched.</p>
+          <div class="micro-list"><span>Worlds</span><span>Servers</span><span>Resourcepacks</span><span>Settings</span></div>
         </article>
-        <article class="card">
-          <h3>Isolated instances</h3>
-          <p>Keeps Vesper game data separate from the official launcher installation and other instances.</p>
+
+        <article class="feature" data-reveal>
+          <div class="feature-number">03</div>
+          <p class="feature-label">INTEGRITY</p>
+          <h3>Trust the files you launch.</h3>
+          <p>Game files are checked against official metadata. Damaged or missing files can be repaired instead of making you reinstall everything.</p>
+          <div class="hash-line"><i></i><span>SHA-1 VERIFIED</span></div>
         </article>
-        <article class="card">
-          <h3>Java detection</h3>
-          <p>Detects a compatible local Java installation and uses configured memory settings for launch.</p>
+
+        <article class="feature feature-wide feature-cold" data-reveal>
+          <div class="feature-number">04</div>
+          <div>
+            <p class="feature-label">UPDATES</p>
+            <h3>Signed updates. No blind trust.</h3>
+            <p>Vesper's updater verifies cryptographic signatures before installing an update. A tampered package is rejected before it can replace the application.</p>
+          </div>
+          <div class="update-visual" aria-hidden="true">
+            <div class="update-ring"><span>V</span></div>
+            <div><small>UPDATE CHANNEL</small><strong>VERIFIED</strong><em>signature valid</em></div>
+          </div>
         </article>
       </div>
     </section>
 
-    <section id="security" class="section container">
-      <div class="section-heading">
-        <span>02</span>
-        <h2>Authentication & security</h2>
+    <section id="story" class="section story shell">
+      <div class="story-logo" data-reveal>
+        <img src="assets/vesper-mark.png" alt="Vesper symbol" />
+        <div class="story-beam"></div>
       </div>
-      <div class="panel">
-        <p>
-          Vesper uses Microsoft's public-client device authorization flow. It never asks for,
-          receives, or stores a Microsoft account password.
-        </p>
-        <ul>
-          <li>Microsoft scopes are limited to <code>XboxLive.signin</code> and <code>offline_access</code>.</li>
-          <li>No Microsoft Graph permissions are requested.</li>
-          <li>No client secret is embedded in the desktop application.</li>
-          <li>Refresh credentials are stored using Windows Credential Manager.</li>
-          <li>Access tokens are kept in application memory and are not published or collected.</li>
-          <li>Vesper requires valid Microsoft/Minecraft authentication and has no offline/cracked account bypass.</li>
-        </ul>
+      <div class="story-copy" data-reveal>
+        <p class="section-index">02 / ORIGIN</p>
+        <h2>It started with one launcher that didn't exist yet.</h2>
+        <p class="story-lead">Vesper began in 2026 as a personal project by Dion: build the Minecraft launcher he actually wanted to use, then keep pushing until it felt like a real product.</p>
+        <p>The name <strong>Vesper</strong> comes from evening — the point where daylight gives way to the night. That became the visual language too: winter skies, cold light, quiet interfaces, and a launcher that feels calm instead of crowded.</p>
+        <div class="timeline">
+          <div><time>01</time><span><b>Prototype</b><small>A winter-themed launcher concept becomes a working Tauri desktop app.</small></span></div>
+          <div><time>02</time><span><b>Real launch</b><small>Microsoft authentication, Mojang files and Minecraft launch reach production acceptance.</small></span></div>
+          <div><time>03</time><span><b>Beyond vanilla</b><small>Java automation, migration and secure updating lay the foundation for the Vesper Client.</small></span></div>
+        </div>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="section-heading">
-        <span>03</span>
-        <h2>Project status</h2>
+    <section class="quote-section" data-reveal>
+      <div class="shell">
+        <p>“Vesper should feel like the moment before the game starts — quiet, cold, and ready.”</p>
+        <span>— AXON STUDIO</span>
       </div>
-      <div class="panel">
-        <p>
-          Vesper is currently in development and undergoing Minecraft Game Services application review.
-          The launcher is not a Minecraft replacement and does not redistribute the Minecraft game.
-        </p>
-        <p class="small">
-          Vesper is an independent project and is not affiliated with, endorsed by, or sponsored by
-          Mojang Studios or Microsoft.
-        </p>
+    </section>
+
+    <section id="security" class="section shell security">
+      <div class="section-intro" data-reveal>
+        <p class="section-index">03 / SECURITY</p>
+        <h2>Your account stays yours.</h2>
+        <p>Security isn't a badge on the website. It's part of how Vesper is built.</p>
+      </div>
+      <div class="security-layout">
+        <div class="security-main" data-reveal>
+          <div class="security-mark">✦</div>
+          <h3>Microsoft signs you in. Vesper doesn't ask for your password.</h3>
+          <p>Vesper uses Microsoft's public-client device authorization flow for legitimate Minecraft authentication.</p>
+        </div>
+        <div class="security-list">
+          <article data-reveal><b>01</b><span><strong>Minimal scopes</strong><small>XboxLive.signin and offline_access. No Microsoft Graph permissions.</small></span></article>
+          <article data-reveal><b>02</b><span><strong>Windows Credential Manager</strong><small>Refresh credentials stay in the Windows credential store instead of plain launcher files.</small></span></article>
+          <article data-reveal><b>03</b><span><strong>No cracked bypass</strong><small>Vesper is built around valid Microsoft and Minecraft authentication.</small></span></article>
+          <article data-reveal><b>04</b><span><strong>Signed updater</strong><small>Update packages are verified before installation and modified packages are rejected.</small></span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section shell roadmap">
+      <div class="section-intro" data-reveal>
+        <p class="section-index">04 / NEXT</p>
+        <h2>The launcher is the foundation.</h2>
+        <p>Vesper is being built in layers. Features only move out of development when they are ready to become part of normal play.</p>
+      </div>
+      <div class="roadmap-grid">
+        <article data-reveal><span class="phase live">NOW</span><h3>Launcher core</h3><p>Authentication, version management, isolated data, Java automation, migration and updater.</p></article>
+        <article data-reveal><span class="phase">NEXT</span><h3>Fabric & mods</h3><p>Loader-aware instances, dependency validation and real mod management.</p></article>
+        <article data-reveal><span class="phase">LATER</span><h3>Vesper Client</h3><p>Performance, HUD tools and a native in-game Vesper experience.</p></article>
+      </div>
+    </section>
+
+    <section id="download" class="download-section">
+      <div class="download-glow"></div>
+      <div class="shell download-inner" data-reveal>
+        <img src="assets/vesper-mark.png" alt="" />
+        <p class="section-index">WINDOWS x64</p>
+        <h2>Ready when Vesper is.</h2>
+        <p>The website automatically links to the latest public Windows release when one is available.</p>
+        <a class="button button-primary button-big" data-download aria-disabled="true">
+          <span data-download-label>Public release coming soon</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
+        </a>
+        <div class="download-meta"><span data-version>Preview</span><i></i><span>Windows 10/11 x64</span><i></i><span>Independent project</span></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div>
-        <strong>VESPER</strong>
-        <span>Powered by AXON Studio</span>
+    <div class="shell footer-grid">
+      <div class="footer-brand">
+        <img src="assets/vesper-mark.png" alt="" />
+        <div><strong>VESPER</strong><span>POWERED BY AXON STUDIO</span></div>
       </div>
-      <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="mailto:baftiajdion@gmail.com">Contact</a>
-      </div>
+      <div class="footer-col"><b>Vesper</b><a href="#features">Features</a><a href="#story">Story</a><a href="#roadmap">Roadmap</a></div>
+      <div class="footer-col"><b>Trust</b><a href="#security">Security</a><a href="privacy.html">Privacy</a><a href="mailto:baftiajdion@gmail.com">Contact</a></div>
+      <div class="footer-note">Vesper is an independent project and is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.</div>
     </div>
+    <div class="shell footer-bottom"><span>© 2026 AXON Studio</span><span>Built in Switzerland.</span></div>
   </footer>
 </body>
 </html>

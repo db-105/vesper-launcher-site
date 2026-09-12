@@ -3,96 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050a12" />
   <meta name="description" content="Vesper Launcher privacy policy." />
-  <title>Privacy Policy — Vesper Launcher</title>
+  <title>Privacy — Vesper Launcher</title>
   <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body class="legal-page">
-  <div class="sky" aria-hidden="true">
-    <div class="stars stars-a"></div>
-    <div class="stars stars-b"></div>
-  </div>
-
-  <header class="nav-wrap">
-    <nav class="nav container">
-      <a class="brand" href="index.html"><span class="mini-mark">✦</span><span class="brand-word">VESPER</span></a>
-      <div class="links"><a href="index.html">Home</a></div>
-    </nav>
-  </header>
-
-  <main class="container legal">
-    <img class="legal-logo" src="assets/vesper-logo.png" alt="Vesper" />
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 2026</p>
-
-    <section>
-      <h2>Overview</h2>
-      <p>
-        Vesper Launcher is a Windows desktop application for Minecraft Java Edition.
-        Vesper is designed to minimize the collection of personal information.
-      </p>
-    </section>
-
-    <section>
-      <h2>Microsoft authentication</h2>
-      <p>
-        Vesper uses Microsoft's OAuth device authorization flow. Authentication is handled by Microsoft.
-        Vesper never receives or stores the user's Microsoft password.
-      </p>
-      <p>
-        The application requests only the scopes required for Xbox/Minecraft authentication:
-        <code>XboxLive.signin</code> and <code>offline_access</code>.
-        Vesper does not request Microsoft Graph permissions.
-      </p>
-    </section>
-
-    <section>
-      <h2>Credentials and tokens</h2>
-      <p>
-        Refresh credentials are stored locally using Windows Credential Manager.
-        Access tokens are held in application memory for the time required to authenticate with the relevant services.
-        Vesper does not intentionally transmit authentication tokens to AXON Studio or any custom analytics server.
-      </p>
-    </section>
-
-    <section>
-      <h2>Local game data</h2>
-      <p>
-        Vesper stores launcher configuration, Minecraft files, logs, version metadata and instance data locally
-        on the user's device. These files are necessary for launcher functionality and troubleshooting.
-      </p>
-    </section>
-
-    <section>
-      <h2>Account requirements</h2>
-      <p>
-        Vesper requires legitimate Microsoft/Minecraft authentication. It does not provide an offline,
-        cracked, or authentication-bypass mode.
-      </p>
-    </section>
-
-    <section>
-      <h2>Third-party services</h2>
-      <p>
-        Vesper communicates with services operated by Microsoft, Xbox and Mojang/Minecraft where required
-        for authentication, game metadata and legitimate game access. Those services have their own privacy policies.
-      </p>
-    </section>
-
-    <section>
-      <h2>Contact</h2>
-      <p>
-        Privacy questions can be sent to <a href="mailto:baftiajdion@gmail.com">baftiajdion@gmail.com</a>.
-      </p>
-    </section>
-
-    <section>
-      <h2>Trademark notice</h2>
-      <p>
-        Vesper is an independent project and is not affiliated with, endorsed by, or sponsored by Mojang Studios
-        or Microsoft. Minecraft is a trademark of Microsoft/Mojang.
-      </p>
-    </section>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="ambient" aria-hidden="true"><div class="aurora aurora-a"></div><div class="aurora aurora-b"></div></div>
+  <header class="nav-wrap nav-scrolled"><nav class="nav shell"><a class="brand" href="index.html"><img src="assets/vesper-mark.png" alt="" /><span>VESPER</span></a><div class="nav-links"><a href="index.html#security">Security</a><a href="index.html#story">Story</a></div><a class="nav-download" href="index.html#download">Download</a></nav></header>
+  <main class="shell legal">
+    <div class="legal-head"><img src="assets/vesper-mark.png" alt="Vesper symbol" /><h1>Privacy Policy</h1><p>Last updated September 2026</p></div>
+    <section><h2>Overview</h2><p>Vesper Launcher is a Windows desktop launcher for Minecraft Java Edition. It is designed to keep launcher and game data local where practical and to avoid unnecessary collection of personal information.</p></section>
+    <section><h2>Microsoft authentication</h2><p>Vesper uses Microsoft's OAuth device authorization flow. Authentication is handled by Microsoft. Vesper does not ask for or store the user's Microsoft password.</p><p>The application requests the scopes <code>XboxLive.signin</code> and <code>offline_access</code>. Vesper does not request Microsoft Graph permissions.</p></section>
+    <section><h2>Credentials and tokens</h2><p>Refresh credentials are stored locally using Windows Credential Manager. Access tokens are used in application memory as required for authentication with Microsoft, Xbox and Minecraft services. Vesper does not intentionally transmit these credentials to AXON Studio or a custom analytics server.</p></section>
+    <section><h2>Local game data</h2><p>Launcher configuration, Minecraft files, logs, version metadata, managed Java runtimes, imported instances and game data are stored locally on the user's device as required for launcher functionality.</p></section>
+    <section><h2>Updates</h2><p>Vesper may contact its configured release endpoint to check for new versions. Update packages are cryptographically verified before installation. Release hosting providers may receive ordinary network metadata under their own privacy policies.</p></section>
+    <section><h2>Account requirements</h2><p>Vesper requires legitimate Microsoft/Minecraft authentication. It does not provide a cracked, offline-account or authentication-bypass mode.</p></section>
+    <section><h2>Third-party services</h2><p>Vesper communicates with services operated by Microsoft, Xbox, Mojang/Minecraft and release-hosting infrastructure where needed for authentication, game metadata, legitimate game access and updates. Those services have their own privacy policies.</p></section>
+    <section><h2>Contact</h2><p>Privacy questions can be sent to <a href="mailto:baftiajdion@gmail.com">baftiajdion@gmail.com</a>.</p></section>
+    <section><h2>Trademark notice</h2><p>Vesper is an independent project and is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft. Minecraft is a trademark of Microsoft/Mojang.</p></section>
   </main>
+  <footer><div class="shell footer-bottom"><span>© 2026 AXON Studio</span><span><a href="index.html">Back to Vesper</a></span></div></footer>
 </body>
 </html>
