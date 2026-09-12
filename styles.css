@@ -349,3 +349,7 @@ main, footer { position:relative; z-index:2; }
   .studio-frame { min-height:285px; }
   .studio-lead { font-size:16px; }
 }
+
+/* Kognitiv Systems parent-brand refinement */
+.studio-frame img { max-width:min(88%, 560px); max-height:520px; object-fit:contain; }
+.studio-frame { background:radial-gradient(circle at 50% 44%,rgba(141,188,235,.09),transparent 42%),linear-gradient(145deg,rgba(6,14,24,.96),rgba(2,7,13,.98)); }
