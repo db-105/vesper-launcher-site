@@ -1,18 +1,14 @@
-# Vesper Launcher website v3
+# Vesper Launcher Website
 
-Static GitHub Pages site for Vesper Launcher.
+Official public website for Vesper Launcher, powered by AXON Studio.
 
-## Files
-- `index.html` — landing page
-- `privacy.html` — privacy policy
-- `styles.css` — responsive dark/winter visual system
-- `script.js` — irregular animated starfield, reveal animations, parallax and release download lookup
-- `assets/vesper-logo-full.png` — full supplied lockup
-- `assets/vesper-mark.png` — symbol-focused crop of the supplied logo
-- `assets/vesper-word.png` — wordmark-focused crop
+## v3.1 polish
 
-## Download behavior
-The download buttons query the latest public GitHub release from `db-105/vesper-launcher-releases` and link to the first Windows `.exe` asset. If no public release exists yet, the buttons intentionally show `Public release coming soon` and cannot download an unapproved build.
+- irregular animated starfield made visible above the background layer
+- seamless, slower feature ticker with two complete tracks and hover-to-pause
+- privacy title centered to the viewport
+- dedicated AXON Studio closing section using the official studio logo
+- dynamic download button still resolves the latest public Windows `.exe` from `db-105/vesper-launcher-releases`
+- when no public release exists, the download CTA safely remains in preview / coming-soon state
 
-## Deployment
-Copy these files into the root of `db-105/vesper-launcher-site` and commit to the branch used by GitHub Pages.
+Vesper is an independent project and is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.

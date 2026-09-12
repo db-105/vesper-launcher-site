@@ -7,7 +7,7 @@
     const start = performance.now();
     const rand = (() => { let seed = 0x5e5f3a1; return () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 4294967296); })();
     const centers = [[.09,.15],[.28,.29],[.51,.12],[.73,.27],[.92,.13],[.17,.61],[.57,.53],[.84,.69]];
-    const stars = Array.from({ length: 255 }, () => {
+    const stars = Array.from({ length: 340 }, () => {
       const clustered = rand() < .64;
       let x, y;
       if (clustered) {
@@ -16,10 +16,10 @@
         x = Math.max(.005,Math.min(.995,cx+Math.cos(a)*r));
         y = Math.max(.01,Math.min(.86,cy+Math.sin(a)*r));
       } else { x=rand(); y=Math.pow(rand(),1.2)*.86; }
-      return { x,y,r:.25+Math.pow(rand(),2.5)*1.6,a:.16+rand()*.75,phase:rand()*Math.PI*2,speed:.3+rand()*.9,cool:rand()>.78 };
+      return { x,y,r:.32+Math.pow(rand(),2.35)*1.85,a:.24+rand()*.76,phase:rand()*Math.PI*2,speed:.28+rand()*.86,cool:rand()>.76 };
     });
     const resize=()=>{ dpr=Math.min(devicePixelRatio||1,2); width=innerWidth; height=innerHeight; canvas.width=width*dpr; canvas.height=height*dpr; canvas.style.width=width+'px'; canvas.style.height=height+'px'; ctx.setTransform(dpr,0,0,dpr,0,0); };
-    const draw=(now)=>{ ctx.clearRect(0,0,width,height); const t=(now-start)/1000, shift=scrollY*.018; for(const s of stars){ const tw=reducedMotion?1:.82+Math.sin(t*s.speed+s.phase)*.18, alpha=s.a*tw, x=s.x*width, y=s.y*height-shift*(.25+s.r*.25); if(y<-5||y>height+5) continue; ctx.beginPath(); ctx.fillStyle=s.cool?`rgba(161,205,255,${alpha})`:`rgba(238,247,255,${alpha})`; ctx.arc(x,y,s.r,0,Math.PI*2); ctx.fill(); if(s.r>1.25){ ctx.strokeStyle=`rgba(205,231,255,${alpha*.2})`; ctx.lineWidth=.5; ctx.beginPath(); ctx.moveTo(x-s.r*3,y); ctx.lineTo(x+s.r*3,y); ctx.moveTo(x,y-s.r*3); ctx.lineTo(x,y+s.r*3); ctx.stroke(); }} if(!reducedMotion) raf=requestAnimationFrame(draw); };
+    const draw=(now)=>{ ctx.clearRect(0,0,width,height); const t=(now-start)/1000, shift=scrollY*.018; for(const s of stars){ const tw=reducedMotion?1:.82+Math.sin(t*s.speed+s.phase)*.18, alpha=s.a*tw, x=s.x*width, y=s.y*height-shift*(.25+s.r*.25); if(y<-5||y>height+5) continue; ctx.beginPath(); ctx.fillStyle=s.cool?`rgba(161,205,255,${alpha})`:`rgba(238,247,255,${alpha})`; ctx.arc(x,y,s.r,0,Math.PI*2); ctx.fill(); if(s.r>1.25){ ctx.strokeStyle=`rgba(205,231,255,${alpha*.32})`; ctx.lineWidth=.5; ctx.beginPath(); ctx.moveTo(x-s.r*3,y); ctx.lineTo(x+s.r*3,y); ctx.moveTo(x,y-s.r*3); ctx.lineTo(x,y+s.r*3); ctx.stroke(); }} if(!reducedMotion) raf=requestAnimationFrame(draw); };
     resize(); addEventListener('resize',resize,{passive:true}); draw(start); addEventListener('pagehide',()=>cancelAnimationFrame(raf),{once:true});
   }
   const reveals=document.querySelectorAll('[data-reveal]');
