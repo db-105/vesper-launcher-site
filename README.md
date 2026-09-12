@@ -15,3 +15,7 @@ Vesper is an independent project and is not affiliated with, endorsed by, or spo
 
 
 Branding note: this package replaces all visible AXON Studio references with Kognitiv Systems and refreshes the Vesper full lockup accordingly.
+
+
+## v3.3 fix
+Removed the remaining AXON / STUDIO label from the Kognitiv Systems company panel.

@@ -311,7 +311,7 @@ main, footer { position:relative; z-index:2; }
   background:radial-gradient(circle at 52% 48%,rgba(62,128,198,.18),transparent 35%);
 }
 .studio-frame::after {
-  content:"AXON / STUDIO";
+  content:"KOGNITIV / SYSTEMS";
   position:absolute;
   left:25px;
   bottom:20px;
