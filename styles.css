@@ -351,5 +351,17 @@ main, footer { position:relative; z-index:2; }
 }
 
 /* Kognitiv Systems parent-brand refinement */
+.download-options { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; width:100%; margin-top:32px; text-align:left; }
+.download-card { min-width:0; padding:28px; border:1px solid var(--line); border-radius:16px; background:rgba(5,14,24,.86); }
+.download-card h3 { margin:14px 0; font-size:22px; color:#d4e5f5; }
+.download-card p { line-height:1.7; }
+.download-card .button { max-width:100%; white-space:normal; text-align:center; }
+.channel-label { margin:0; color:#8bb9df; font-size:10px; letter-spacing:.16em; }
+.channel-status { min-height:48px; font-size:12px; color:#8da7bd; }
+.beta-card { border-color:rgba(198,168,111,.32); scroll-margin-top:100px; }
+.beta-card .channel-label { color:#d7c18e; }
+.beta-limit { font-size:13px; color:#b9ad93; }
+@media (max-width:760px) { .download-options { grid-template-columns:1fr; } .download-card { padding:22px; } }
 .studio-frame img { max-width:min(88%, 560px); max-height:520px; object-fit:contain; }
 .studio-frame { background:radial-gradient(circle at 50% 44%,rgba(141,188,235,.09),transparent 42%),linear-gradient(145deg,rgba(6,14,24,.96),rgba(2,7,13,.98)); }
+  
