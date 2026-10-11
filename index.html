@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#050a12" />
-  <meta name="description" content="Vesper Launcher — a calm, secure Windows launcher for Minecraft Java Edition, built by Kognitiv Systems." />
+  <meta name="description" content="Vesper Launcher 0.5.0 with integrated Vesper Client 0.1.0 Public Beta for Minecraft Java Edition 26.1.2 and 26.3." />
   <title>Vesper Launcher — Built for the night</title>
   <link rel="preconnect" href="https://api.github.com" />
   <link rel="stylesheet" href="styles.css" />
@@ -31,7 +31,8 @@
         <a href="#story">Story</a>
         <a href="#security">Security</a>
         <a href="privacy.html">Privacy</a>
-        <a href="#studio">Company</a>
+        <a href="terms.html">Beta terms</a>
+        <a href="#studio">Project</a>
       </div>
       <a class="nav-download" href="#download">Download</a>
     </nav>
@@ -44,19 +45,19 @@
         <h1>Built for the night.<br /><em>Made to disappear.</em></h1>
         <p class="hero-lead">
           Vesper gets you into Minecraft without turning the launcher into the main event.
-          Clean instances, secure Microsoft login, automatic Java handling, and a dark interface that stays out of your way.
+          Launcher 0.5.0 brings optional Vesper Client 0.1.0 Public Beta for Minecraft 26.1.2 and 26.3, alongside Microsoft login, managed Java, instances, mods and skins.
         </p>
         <div class="hero-actions">
-          <a class="button button-primary" data-download aria-disabled="true">
-            <span data-download-label>Public release coming soon</span>
+          <a class="button button-primary" data-download="stable" aria-disabled="true">
+            <span data-download-label="stable">Vesper Launcher 0.4.0 — Stable</span>
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
           </a>
-          <a class="button button-ghost" href="#story">Explore Vesper</a>
+          <a class="button button-ghost" href="#download-beta">0.5.0 Public Beta · Manual Download</a>
         </div>
         <div class="release-line">
           <span class="status-dot"></span>
-          <strong data-version>Preview</strong>
-          <span data-release-status>Release candidate in final testing</span>
+          <strong>Stable 0.4.0 · Public Beta 0.5.0</strong>
+          <span data-release-status="stable">Checking Stable download</span>
         </div>
       </div>
 
@@ -137,8 +138,8 @@
           <div class="feature-number">04</div>
           <div>
             <p class="feature-label">UPDATES</p>
-            <h3>Signed updates. No blind trust.</h3>
-            <p>Vesper's updater verifies cryptographic signatures before installing an update. A tampered package is rejected before it can replace the application.</p>
+            <h3>Verified packages. Separate channels.</h3>
+            <p>Vesper's updater verifies package signatures. Stable 0.4.0 keeps its existing update channel. Public Beta 0.5.0 is a separate manual download; automatic beta updates are not currently promised.</p>
           </div>
           <div class="update-visual" aria-hidden="true">
             <div class="update-ring"><span>V</span></div>
@@ -156,7 +157,7 @@
       <div class="story-copy" data-reveal>
         <p class="section-index">02 / ORIGIN</p>
         <h2>It started with one launcher that didn't exist yet.</h2>
-        <p class="story-lead">Vesper began in 2026 as a personal project by Dion: build the Minecraft launcher he actually wanted to use, then keep pushing until it felt like a real product.</p>
+        <p class="story-lead">Vesper began in 2026 as an independent project: build a focused Minecraft launcher, then keep refining the experience.</p>
         <p>The name <strong>Vesper</strong> comes from evening — the point where daylight gives way to the night. That became the visual language too: winter skies, cold light, quiet interfaces, and a launcher that feels calm instead of crowded.</p>
         <div class="timeline">
           <div><time>01</time><span><b>Prototype</b><small>A winter-themed launcher concept becomes a working Tauri desktop app.</small></span></div>
@@ -198,12 +199,18 @@
       <div class="section-intro" data-reveal>
         <p class="section-index">04 / NEXT</p>
         <h2>The launcher is the foundation.</h2>
-        <p>Vesper is being built in layers. Features only move out of development when they are ready to become part of normal play.</p>
+        <p>Launcher 0.5.0 integrates Client 0.1.0 as an optional Public Beta. Beta support is limited to Minecraft 26.1.2 and 26.3; server rules and third-party compatibility still apply.</p>
       </div>
       <div class="roadmap-grid">
         <article data-reveal><span class="phase live">NOW</span><h3>Launcher core</h3><p>Authentication, version management, isolated data, Java automation, migration and updater.</p></article>
-        <article data-reveal><span class="phase">NEXT</span><h3>Fabric & mods</h3><p>Loader-aware instances, dependency validation and real mod management.</p></article>
-        <article data-reveal><span class="phase">LATER</span><h3>Vesper Client</h3><p>Performance, HUD tools and a native in-game Vesper experience.</p></article>
+        <article data-reveal><span class="phase live">LAUNCHER 0.5.0</span><h3>Fabric, mods & skins</h3><p>Loader-aware instances, dependency and compatibility checks, Modrinth mod management and skin previews.</p></article>
+        <article data-reveal><span class="phase">PUBLIC BETA</span><h3>Vesper Client 0.1.0</h3><p>Includes Vesper Client 0.1.0 Public Beta: 40 local modules, Studio layouts and presets, world-space Waypoints and Vanilla HUD effects for Minecraft 26.1.2 and 26.3.</p></article>
+      </div>
+      <div class="section-intro" data-reveal>
+        <h3>Beta acceptance remains open.</h3>
+        <p>Final human acceptance is pending for physical Right Shift, the complete HUD Studio and preset workflow, world-space Waypoints, material-colored Vanilla Armor and Vanilla Hunger Preview. Graphical gameplay acceptance remains open. Full mod/shader compatibility and performance improvements are not guaranteed.</p>
+        <p>Opt in per compatible instance. Disabled instances stay disabled. Client payloads are included with the manually installed Launcher and applied before an opted-in instance launches. Automatic beta updates are not currently promised. Back up important worlds and settings.</p>
+        <p>The final automatic 0.4.0 to 0.5.0 installation, relaunch and data-retention path remains untested. This manual prerelease does not claim that acceptance. Stable users are not automatically moved to the beta.</p>
       </div>
     </section>
 
@@ -212,13 +219,29 @@
       <div class="shell download-inner" data-reveal>
         <img src="assets/vesper-mark.png" alt="" />
         <p class="section-index">WINDOWS x64</p>
-        <h2>Ready when Vesper is.</h2>
-        <p>The website automatically links to the latest public Windows release when one is available.</p>
-        <a class="button button-primary button-big" data-download aria-disabled="true">
-          <span data-download-label>Public release coming soon</span>
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v11m0 0 4-4m-4 4-4-4M5 19h14" /></svg>
-        </a>
-        <div class="download-meta"><span data-version>Preview</span><i></i><span>Windows 10/11 x64</span><i></i><span>Independent project</span></div>
+        <h2>Choose your Vesper download.</h2>
+        <p>Stable stays on 0.4.0. The optional Client is included with the separately installed 0.5.0 Public Beta.</p>
+        <div class="download-options">
+          <article class="download-card" aria-label="Stable download">
+            <p class="channel-label">STABLE</p>
+            <h3>Vesper Launcher 0.4.0 — Stable</h3>
+            <p>The latest stable Launcher. Existing installations keep their current automatic update channel.</p>
+            <a class="button button-primary" data-download="stable" aria-disabled="true"><span data-download-label="stable">Vesper Launcher 0.4.0 — Stable</span></a>
+            <p class="channel-status" data-release-status="stable" role="status">Checking Stable download</p>
+            <p><a data-release-notes="stable" aria-disabled="true">Stable release notes</a> · <a data-checksums="stable" aria-disabled="true">Stable checksums</a></p>
+          </article>
+          <article id="download-beta" class="download-card beta-card" aria-label="Public Beta manual download">
+            <p class="channel-label">PUBLIC BETA · MANUAL DOWNLOAD</p>
+            <h3>Vesper Launcher 0.5.0 — Public Beta</h3>
+            <p>Integrated optional Vesper Client 0.1.0 for Minecraft 26.1.2 and 26.3. Back up important data before trying the beta.</p>
+            <a class="button button-ghost" data-download="beta" aria-disabled="true"><span data-download-label="beta">Vesper Launcher 0.5.0 — Public Beta (Manual Download)</span></a>
+            <p class="channel-status" data-release-status="beta" role="status">Checking Public Beta download…</p>
+            <p><a data-release-notes="beta" aria-disabled="true">Beta release notes</a> · <a data-checksums="beta" aria-disabled="true">Beta checksums</a> · <a href="terms.html">Beta terms</a></p>
+            <p class="beta-limit">Automatic beta updates are not currently promised. Graphical gameplay and some human acceptances remain open. Full mod/shader compatibility is not guaranteed.</p>
+          </article>
+        </div>
+        <div class="download-meta"><span>Windows 10/11 x64</span><i></i><span>Independent project</span></div>
+        <p>Tauri updater signatures authenticate update files; they are separate from Windows publisher certificates. The previous Defender Bearfoos detection remains unresolved and is not a proven false positive. Do not disable protection or bypass a malware block.</p>
       </div>
     </section>
 
@@ -233,7 +256,7 @@
         <div class="studio-copy" data-reveal>
           <p class="section-index">05 / KOGNITIV SYSTEMS</p>
           <h2>Vesper is only the beginning.</h2>
-          <p class="studio-lead">Vesper is built by <strong>Kognitiv Systems</strong>, an independent technology company founded by Dion in Switzerland.</p>
+          <p class="studio-lead">Vesper is developed under the <strong>Kognitiv Systems</strong> brand, an independent software project. The brand is not presented as a registered company. The authorized rights holder approved the beta terms and distribution permissions.</p>
           <p>Kognitiv Systems is built around one idea: create intelligent software and systems that feel precise, capable and genuinely useful — from AI and security to automation, future robotics and connected tools.</p>
           <div class="studio-tags" aria-label="Kognitiv Systems focus areas">
             <span>AI</span><span>SECURITY</span><span>SYSTEMS</span><span>ROBOTICS</span><span>SOFTWARE</span>
@@ -251,10 +274,10 @@
         <div><strong>VESPER</strong><span>POWERED BY KOGNITIV SYSTEMS</span></div>
       </div>
       <div class="footer-col"><b>Vesper</b><a href="#features">Features</a><a href="#story">Story</a><a href="#roadmap">Roadmap</a></div>
-      <div class="footer-col"><b>Trust</b><a href="#security">Security</a><a href="privacy.html">Privacy</a><a href="mailto:baftiajdion@gmail.com">Contact</a></div>
-      <div class="footer-note">Vesper is an independent project and is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.</div>
+      <div class="footer-col"><b>Trust</b><a href="#security">Security</a><a href="privacy.html">Privacy</a><a href="terms.html">Beta terms</a><a href="mailto:kognitivsystems@proton.me">Contact</a></div>
+      <div class="footer-note">This is not an official Minecraft product and is not approved by or associated with Mojang or Microsoft. Vesper is an independent project.</div>
     </div>
-    <div class="shell footer-bottom"><span>© 2026 Kognitiv Systems</span><span>Built in Switzerland.</span></div>
+    <div class="shell footer-bottom"><span>Vesper · Kognitiv Systems brand</span><span>Public Beta terms approved.</span></div>
   </footer>
 </body>
 </html>
